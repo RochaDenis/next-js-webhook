@@ -10,6 +10,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'neon-pink': '#ff00ff',
+        'neon-green': '#39ff14',
+        'neon-blue': '#00ffff',
+        'neon-yellow': '#faff00',
+        'neon-purple': '#b026ff',
       },
     },
   },

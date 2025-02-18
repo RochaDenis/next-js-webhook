@@ -19,3 +19,25 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Classes de cores neon */
+.neon-pink {
+  color: #ff00ff;
+  border-color: #ff00ff;
+}
+.neon-green {
+  color: #39ff14;
+  border-color: #39ff14;
+}
+.neon-blue {
+  color: #00ffff;
+  border-color: #00ffff;
+}
+.neon-yellow {
+  color: #faff00;
+  border-color: #faff00;
+}
+.neon-purple {
+  color: #b026ff;
+  border-color: #b026ff;
+}
