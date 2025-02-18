@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Discord Webhook Integration
 
-## Getting Started
+This project demonstrates how to integrate Discord webhooks with a Next.js 15 application to send user-submitted data directly to a Discord text channel.
 
-First, run the development server:
+## Features
+- User-friendly form for submitting messages
+- Integration with Discord webhooks to send data
+- Real-time feedback using React 19's `useActionState` hook
+- Toast notifications for success/error messages
+- Built with Next.js 15, Tailwind CSS, and Turbopack
 
+## Prerequisites
+- Node.js installed
+- Discord account with admin access to a server
+
+## Setup Instructions
+
+### 1. Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/next-js-discord.git
+cd next-js-discord
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+yarn install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Configure Discord Webhook
+- Go to your Discord server settings.
+- Select a text channel and navigate to **Integrations > Webhooks**.
+- Create a new webhook and copy the webhook URL.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Add Environment Variables
+- Create a `.env` file in the project root.
+```plaintext
+DISCORD_WEBHOOK_URL=<YOUR_DISCORD_WEBHOOK_URL>
+```
+- Add `.env` to your `.gitignore` to prevent it from being committed.
 
-## Learn More
+### 5. Run the Project
+```bash
+yarn dev
+```
+- Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
+```
+app/
+  |_ _components/
+  |    |_ message-form.jsx
+  |_ actions/
+  |    |_ index.js
+  |_ layout.js
+  |_ page.js
+.env
+.gitignore
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
+- Fill out the form with your details and message.
+- Submit the form to send the message to the configured Discord channel.
+- Receive instant feedback via toast notifications.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Dependencies
+- Next.js 15
+- React 19
+- Tailwind CSS
+- sonner (for toast notifications)
 
-## Deploy on Vercel
+## Contributing
+- Fork the repository.
+- Create a new branch.
+- Commit your changes.
+- Open a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
+This project is licensed under the MIT License.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+[Tapas Adhikary](https://github.com/tapasadhikary)  
+Demand-Stack Developer, Open Source Enthusiast, Writer.
+
+---
+
+> Inspired by the [freeCodeCamp](https://www.freecodecamp.org) tutorial on integrating Discord webhooks
